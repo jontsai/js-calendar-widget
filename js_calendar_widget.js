@@ -20,15 +20,15 @@ YUI().use('node', function (Y) {
     var uiMonthYear = Y.one('#cal_ui_month_year');
 
     // calendar state variables
-    var current_month, current_year;
+    var currentMonth, currentYear, todayDate;
 
     function redrawCalendar() {
-        var monthYear = MONTHS[current_month] + " " + current_year;
+        var monthYear = MONTHS[currentMonth] + " " + currentYear;
         uiMonthYear.setContent(monthYear);
 
-        var firstOfMonth = new Date(current_year, current_month, 1);
+        var firstOfMonth = new Date(currentYear, currentMonth, 1);
         var dayOfWeek = firstOfMonth.getDay();
-        var currentDate = new Date(current_year, current_month, 1 - dayOfWeek);
+        var currentDate = new Date(currentYear, currentMonth, 1 - dayOfWeek);
         var inMonth = false;
 
         for (var row=0; row < 6; ++row) {
@@ -45,6 +45,9 @@ YUI().use('node', function (Y) {
                     uiCell.removeClass('cal-ui-cell-other-month');
                 } else {
                     uiCell.addClass('cal-ui-cell-other-month');
+                }
+                if (isDateToday(currentDate)) {
+                    uiCell.addClass('cal-ui-cell-today');
                 }
                 var date = currentDate.getDate();
                 uiDate.setContent(date);
@@ -103,9 +106,16 @@ YUI().use('node', function (Y) {
     }
 
     function setToday() {
-        var now = new Date();
-        current_month = now.getMonth();
-        current_year = now.getFullYear();
+        todayDate = new Date();
+        currentMonth = todayDate.getMonth();
+        currentYear = todayDate.getFullYear();
+    }
+
+    function isDateToday(date) {
+        var isToday = todayDate.getFullYear() == date.getFullYear() &&
+          todayDate.getMonth() == date.getMonth() &&
+          todayDate.getDate() == date.getDate();
+        return isToday;
     }
 
     function handleControlClick(e) {
@@ -114,22 +124,22 @@ YUI().use('node', function (Y) {
         if (control_id == 'cal_ui_today') {
             setToday();
         } else if (control_id == 'cal_ui_prev_year') {
-            current_year -= 1;
+            currentYear -= 1;
         } else if (control_id == 'cal_ui_next_year') {
-            current_year += 1;
+            currentYear += 1;
         } else if (control_id == 'cal_ui_prev_month') {
-            if (current_month == 0) {
-                current_month = 11;
-                current_year -= 1;
+            if (currentMonth == 0) {
+                currentMonth = 11;
+                currentYear -= 1;
             } else {
-                current_month -= 1;
+                currentMonth -= 1;
             }
         } else if (control_id == 'cal_ui_next_month') {
-            if (current_month == 11) {
-                current_month = 0;
-                current_year += 1;
+            if (currentMonth == 11) {
+                currentMonth = 0;
+                currentYear += 1;
             } else {
-                current_month += 1;
+                currentMonth += 1;
             }
         }
         redrawCalendar();

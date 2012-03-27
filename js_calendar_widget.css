@@ -76,6 +76,14 @@
     background-color: #ccc;
 }
 
+.cal-ui-cell-today, .cal-ui-cell-today:hover {
+    background-color: #bdf;
+}
+
+.calendar-row td:hover{
+    background-color: #fbd;
+}
+
 .cal-ui-cell-date {
     font-weight: bold;
     margin-top: 0px;
@@ -84,10 +92,6 @@
 .cal-ui-cell-time {
     font-weight: bold;
     padding-right: 2px;
-}
-
-.calendar-row td:hover {
-    background-color: #bdf;
 }
 
 .calendar-row-last td {
