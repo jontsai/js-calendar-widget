@@ -1,0 +1,103 @@
+/**
+ * author: akajontsai-devel AT yahoo DOT com
+ * file: calendar.css
+ *
+ * This is CSS stylesheet for the page and UI controls for the calendar
+ */
+
+
+.no-highlight {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#calendar_container {
+    width: 736px; /* #calendar::width */
+}
+
+#calendar_controls {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 100px;
+    width: 370px;
+}
+
+#cal_ui_month_year {
+    margin: auto;
+    text-align: center;
+    width: 175px;
+}
+
+#calendar_controls div {
+    margin-left: 5px;
+    margin-right: 5px;
+    float: left;
+}
+
+.calendar-control {
+    color: #ccc;
+    cursor: pointer;
+}
+
+#calendar {
+    width: 736px; /* .calendar-row::width */
+    height: 481px; /* (.calendar-row::height + .calendar-cell * rows + rows + 1 */
+    margin: 30px auto;
+    font-size: 14px;
+    border-spacing: 0px;
+}
+
+.calendar-header th {
+    font-weight: bold;
+    padding: 2px 7px;
+}
+
+.calendar-row {
+    /*width: 736px; */ /* (.calendar-cell::width + 2 * .calendar-cell::padding) * cols + cols + 1 */
+    /*height: 79px; *//* .calendar-cell::height + 2 * .calendar-cell::padding */
+}
+
+/*.cal-ui-cell {*/
+.calendar-row td {
+    vertical-align: top;
+    padding: 2px 7px;
+    width: 100px;
+    height: 75px;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+}
+
+.cal-ui-cell-other-month {
+    background-color: #ccc;
+}
+
+.cal-ui-cell-date {
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+.cal-ui-cell-time {
+    font-weight: bold;
+    padding-right: 2px;
+}
+
+.calendar-row td:hover {
+    background-color: #bdf;
+}
+
+.calendar-row-last td {
+    border-bottom: 1px solid #000;
+}
+
+.calendar-col-last {
+    border-right: 1px solid #000;
+}
+
+.calendar-daylabel {
+    font-weight: bold;
+}
