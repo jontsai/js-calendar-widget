@@ -8,7 +8,7 @@
 YUI().use('node', function (Y) {
     var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-    var events = getExternalEvents();
+    var events = (getExternalEvents != undefined)? getExternalEvents() : null;
     // SETUP: must provide a function called getExternalEvents()
     // expects a JSON object of events formatted as follows:
     // events = { 'YYYY-MM-DD' : [ { time: 'HH:MM (24-Hours)', content: 'HTML Markup' }, { ... } ], ... }
@@ -58,7 +58,7 @@ YUI().use('node', function (Y) {
 
     function renderEvents(uiContent, date) {
         var dateString = (date.toISOString) ? date.toISOString().substring(0, 10) : dateToISOString(date);
-        var dayEvents = events[dateString];
+        var dayEvents = (events != undefined) ? events[dateString] : null;
         if (dayEvents) {
             var html = '<ul>';
             dayEvents.sort(function (a, b) {
