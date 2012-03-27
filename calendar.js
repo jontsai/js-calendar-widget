@@ -12,7 +12,6 @@ YUI().use('node', function (Y) {
     // SETUP: must provide a function called getExternalEvents()
     // expects a JSON object of events formatted as follows:
     // events = { 'YYYY-MM-DD' : [ { time: 'HH:MM (24-Hours)', content: 'HTML Markup' }, { ... } ], ... }
-    // events per day are not ordered chronologically and must be sorted first
     // TODO: This works for a small number of events. Can improve performance by implementing an AJAX fetch events in the future
 
     // calendar UI
