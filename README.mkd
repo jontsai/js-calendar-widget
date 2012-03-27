@@ -10,8 +10,12 @@ Getting started
 1. Clone the project from GitHub
    git://github.com/jontsai/js-calendar-widget.git
 2. Drop the files in your project and go!
+   A PHP wrapper is included and an example can be found in index.html. It's basic usage:
+
+   <?php require_once('calendar_wrapper.php'); render_calendar(); ?>   
 
 It is recommended to place any style customizations in a separate CSS file.
 
 Somewhere in your JavaScript and before you include calendar.js, you need to implement a function called getExternalEvents(), which must return a JSON object of events formatted as follows:
+
     // events = { 'YYYY-MM-DD' : [ { time: 'HH:MM (24-Hours)', content: 'HTML Markup' }, { ... } ], ... }
