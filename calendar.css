@@ -54,8 +54,12 @@
     width: 736px; /* .calendar-row::width */
     height: 481px; /* (.calendar-row::height + .calendar-cell * rows + rows + 1 */
     margin: 30px auto;
-    font-size: 14px;
+    font-size: 12px;
     border-spacing: 0px;
+}
+
+.calendar-header {
+    font-size: 14px;
 }
 
 .calendar-header th {
