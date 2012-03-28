@@ -57,7 +57,7 @@ YUI().use('node', function (Y) {
     }
 
     function renderEvents(uiContent, date) {
-        var dateString = (date.toISOString) ? date.toISOString().substring(0, 10) : dateToISOString(date);
+        var dateString = dateToISOString(date);
         var dayEvents = (events != undefined) ? events[dateString] : null;
         if (dayEvents) {
             var html = '<ul>';

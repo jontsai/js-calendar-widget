@@ -1,3 +1,4 @@
+// there is date.toISOString(), but we it does not always display in user's local time
 function dateToISOString(date) {
     var year = date.getFullYear();
     var month = date.getMonth() + 1;
