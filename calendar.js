@@ -8,7 +8,7 @@
 YUI().use('node', function (Y) {
     var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-    var events = (getExternalEvents != undefined)? getExternalEvents() : null;
+    var events = (typeof(getExternalEvents) != 'undefined')? getExternalEvents() : null;
     // SETUP: must provide a function called getExternalEvents()
     // expects a JSON object of events formatted as follows:
     // events = { 'YYYY-MM-DD' : [ { time: 'HH:MM (24-Hours)', content: 'HTML Markup' }, { ... } ], ... }

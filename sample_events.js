@@ -1,4 +1,4 @@
-function getExternalEvents() {
+function getExternalEventsss() {
     var json = {};
     var dayEvents = [];
     var now = new Date();
