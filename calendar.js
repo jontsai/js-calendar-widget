@@ -47,6 +47,8 @@ YUI().use('node', function (Y) {
                 }
                 if (isDateToday(currentDate)) {
                     uiCell.addClass('cal-ui-cell-today');
+                } else {
+                    uiCell.removeClass('cal-ui-cell-today');
                 }
                 var date = currentDate.getDate();
                 uiDate.setContent(date);
