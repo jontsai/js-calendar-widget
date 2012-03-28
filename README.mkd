@@ -19,3 +19,9 @@ It is recommended to place any style customizations in a separate CSS file.
 Somewhere in your JavaScript and before you include calendar.js, you need to implement a function called getExternalEvents(), which must return a JSON object of events formatted as follows:
 
 	// events = { 'YYYY-MM-DD' : [ { time: 'HH:MM (24-Hours)', content: 'HTML Markup' }, { ... } ], ... }
+
+Customization
+-------------
+You can customize the apppearance of the calendar by copying calendar_settings.js, adjusting the values, and sourcing it from your HTML context.
+
+You can also customize the payload or content display of each event by providing your own HTML markup in getExternalEvents().
