@@ -5,6 +5,7 @@ function render_calendar($rel_path = "./") {
   chdir(dirname(__FILE__));
 ?>
 <script src="http://yui.yahooapis.com/3.4.1/build/yui/yui-min.js"></script>
+<script src="<?= $rel_path ?>calendar_settings_default.js"></script>
 <script src="<?= $rel_path ?>helpers.js"></script>
 <script src="<?= $rel_path ?>calendar.js"></script>
 <?php

@@ -6,6 +6,7 @@
     <link type="text/css" rel="stylesheet" href="calendar.css" />
 
     <script src="sample_events.js"></script>
+    <script src="calendar_settings.js"></script>
   </head>
 
   <body>
