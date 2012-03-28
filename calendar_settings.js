@@ -6,6 +6,6 @@
  */
 
 var SETTINGS = {
-    'TIME_HOUR_ONLY': true,
+    'TIME_HOUR_ONLY': false,
     'TIME_24_HOUR': false
 };

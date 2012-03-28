@@ -67,8 +67,8 @@ function formatTimeForCalendarCell(timeString) {
         formattedTime = '';
         var hour = getHourFromTimeString(timeString);
         var minute = getMinuteFromTimeString(timeString);
-        var time24Hour = (typeof(SETTINGS) != 'undefined' && SETTINGS['TIME_24_HOUR'] != undefined)? SETTINGS['TIME_24_HOUR'] : DEFAULTS['TIME_24_HOURS'];
-        var hourOnly = (typeof(SETTINGS) != 'undefined' && SETTINGS['TIME_HOUR_ONLY'] != undefined)? SETTINGS['TIME_HOUR_ONLY'] : DEFAULTS['TIME_HOUR_ONLYS'];
+        var time24Hour = (typeof(SETTINGS) != 'undefined' && SETTINGS['TIME_24_HOUR'] != undefined)? SETTINGS['TIME_24_HOUR'] : DEFAULTS['TIME_24_HOUR'];
+        var hourOnly = (typeof(SETTINGS) != 'undefined' && SETTINGS['TIME_HOUR_ONLY'] != undefined)? SETTINGS['TIME_HOUR_ONLY'] : DEFAULTS['TIME_HOUR_ONLY'];
         var formattedTime = '';
         formattedTime += time24Hour? hour : (hour % 12);
         formattedTime += hourOnly? '' : ':' + (minute < 10? '0' + minute : minute);
