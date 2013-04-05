@@ -12,8 +12,10 @@
  *
  */
 
+var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
 YUI().use('node', function (Y) {
-    var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
 
     var events = (typeof(getExternalEvents) != 'undefined')? getExternalEvents() : null;
     // SETUP: must provide a function called getExternalEvents()
